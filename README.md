@@ -88,3 +88,13 @@ Untuk menambah atau mengubah menu, edit daftar `dummyMenu` di `Data.kt` dan leta
 
 - Tidak memakai database, sehingga akun, keranjang, dan nama profil tidak tersimpan permanen.
 - Proses pemesanan hanya simulasi dan tidak terhubung ke layanan pengiriman atau pembayaran.
+
+
+
+## Tampilan App
+-Splash
+<img width="1080" height="2275" alt="splash" src="https://github.com/user-attachments/assets/fd20baed-7305-4cfd-964f-872a9555c963" />
+
+
+
+
