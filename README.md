@@ -1,73 +1,90 @@
-Kopi dan Nyemil (Komi)
+# Kopi dan Nyemil (Komi)
 
-Aplikasi mobile Android untuk memesan kopi, minuman, dan makanan ringan. Proyek ini dibuat untuk tugas mata kuliah Pemrograman Mobile berdasarkan wireframe “Kopi dan Nyemil”. Seluruh data bersifat statis (dummy) sehingga aplikasi berjalan tanpa database maupun koneksi internet.
+Aplikasi mobile Android untuk memesan kopi, minuman, dan makanan ringan. Proyek ini dibuat untuk tugas mata kuliah Pemrograman Mobile berdasarkan wireframe "Kopi dan Nyemil". Seluruh data bersifat statis (dummy) sehingga aplikasi berjalan tanpa database maupun koneksi internet.
 
-Fitur
-Splash/Welcome dengan tombol untuk memulai aplikasi.
-Sign Up sebagai halaman pilihan menuju Register atau Login.
-Login dengan validasi username dan password.
-Register dengan validasi: semua kolom wajib diisi, password minimal 6 karakter, dan username tidak boleh kembar.
-Home berisi daftar 17 menu dalam tampilan grid dengan foto, dilengkapi pencarian dan filter kategori (Coffee, Drinks, Food).
-Keranjang: jumlah setiap menu bisa ditambah atau dikurangi langsung dari kartu menu. Total item dan harga tampil di bar bawah, dan jumlah item juga muncul sebagai badge pada ikon keranjang di header.
-Order (Alamat Pengiriman) menampilkan ringkasan pesanan serta form nama lengkap, alamat, dan patokan. Jika keranjang kosong, halaman ini menampilkan pesan bahwa keranjang masih kosong.
-Konfirmasi Pesanan setelah pesanan dikirim.
-Profile untuk mengubah nama pengguna dan keluar dari akun.
-Navigasi memakai tombol dan ikon di header Home (keranjang dan profil), tanpa bottom navigation.
-Akun Demo
-Username	Password
-demo	demo12
+## Fitur
+
+- Splash/Welcome dengan tombol untuk memulai aplikasi.
+- Sign Up sebagai halaman pilihan menuju Register atau Login.
+- Login dengan validasi username dan password.
+- Register dengan validasi: semua kolom wajib diisi, password minimal 6 karakter, dan username tidak boleh kembar.
+- Home berisi daftar 17 menu dalam tampilan grid dengan foto, dilengkapi pencarian dan filter kategori (Coffee, Drinks, Food).
+- Keranjang: jumlah setiap menu bisa ditambah atau dikurangi langsung dari kartu menu. Total item dan harga tampil di bar bawah, dan jumlah item juga muncul sebagai badge pada ikon keranjang di header.
+- Order (Alamat Pengiriman) menampilkan ringkasan pesanan serta form nama lengkap, alamat, dan patokan. Jika keranjang kosong, halaman ini menampilkan pesan bahwa keranjang masih kosong.
+- Konfirmasi Pesanan setelah pesanan dikirim.
+- Profile untuk mengubah nama pengguna dan keluar dari akun.
+- Navigasi memakai tombol dan ikon di header Home (keranjang dan profil), tanpa bottom navigation.
+
+## Akun Demo
+
+| Username | Password |
+|----------|----------|
+| demo     | demo12   |
 
 Akun baru juga bisa dibuat lewat halaman Register. Akun disimpan di memori saja, sehingga hilang saat aplikasi ditutup.
 
-Teknologi
-Bahasa: Kotlin
-UI: Jetpack Compose dengan Material 3
-Navigasi: Navigation Compose
-Build: Gradle (Kotlin DSL), Android Gradle Plugin 8.5.2, Kotlin 2.0.20
-Min SDK 24, Target dan Compile SDK 34
-Cara Menjalankan
-Install Android Studio versi terbaru.
-Buka folder proyek KopiDanNyemil melalui File > Open.
-Tunggu proses Gradle sync sampai selesai.
-Pilih emulator atau perangkat Android (Android 7.0 / API 24 ke atas).
-Klik Run.
-Struktur Proyek
+## Teknologi
+
+- Bahasa: Kotlin
+- UI: Jetpack Compose dengan Material 3
+- Navigasi: Navigation Compose
+- Build: Gradle (Kotlin DSL), Android Gradle Plugin 8.5.2, Kotlin 2.0.20
+- Min SDK 24, Target dan Compile SDK 34
+
+## Cara Menjalankan
+
+1. Install Android Studio versi terbaru.
+2. Buka folder proyek `KopiDanNyemil` melalui File > Open.
+3. Tunggu proses Gradle sync sampai selesai.
+4. Pilih emulator atau perangkat Android (Android 7.0 / API 24 ke atas).
+5. Klik Run.
+
+## Struktur Proyek
+
+```
 KopiDanNyemil/
-├── build.gradle.kts
-├── settings.gradle.kts
-├── gradle.properties
-├── gradlew / gradlew.bat
-├── gradle/wrapper/
-└── app/
-    ├── build.gradle.kts
-    └── src/main/
-        ├── AndroidManifest.xml
-        ├── java/com/kopidannyemil/
-        │   ├── MainActivity.kt   # Setup navigasi dan daftar route
-        │   ├── Screens.kt        # Seluruh tampilan (composable)
-        │   ├── Data.kt           # Data menu dummy, model, dan logika state
-        │   └── Theme.kt          # Warna dan tema aplikasi
-        └── res/
-            ├── drawable/         # Logo dan foto menu
-            ├── mipmap-anydpi-v26/# Ikon launcher
-            └── values/           # Tema dan warna
-Alur Aplikasi
+|-- build.gradle.kts
+|-- settings.gradle.kts
+|-- gradle.properties
+|-- gradlew / gradlew.bat
+|-- gradle/wrapper/
+`-- app/
+    |-- build.gradle.kts
+    `-- src/main/
+        |-- AndroidManifest.xml
+        |-- java/com/kopidannyemil/
+        |   |-- MainActivity.kt    (setup navigasi dan daftar route)
+        |   |-- Screens.kt         (seluruh tampilan / composable)
+        |   |-- Data.kt            (data menu dummy, model, logika state)
+        |   `-- Theme.kt           (warna dan tema aplikasi)
+        `-- res/
+            |-- drawable/          (logo dan foto menu)
+            |-- mipmap-anydpi-v26/ (ikon launcher)
+            `-- values/            (tema dan warna)
+```
+
+## Alur Aplikasi
+
+```
 Splash -> Sign Up -> Login / Register -> Home
-                                          |-- ikon profil --> Profile --> kembali ke Home / Log Out
-                                          |-- ikon keranjang atau tombol Order --> Order (Alamat)
-                                                                                      |
-                                                                                 Konfirmasi --> Home
-Data Menu
 
-Menu terdiri dari tiga kategori dan disimpan sebagai daftar statis di Data.kt.
+Home -> ikon profil -> Profile -> kembali ke Home / Log Out
+Home -> ikon keranjang atau tombol Order -> Order (Alamat) -> Konfirmasi -> Home
+```
 
-Kategori	Jumlah	Contoh
-Coffee	8	Espresso, Latte, Cappuccino
-Drinks	5	Matcha Green Tea, Taro Latte
-Food	4	Butter Croissant, Sourdough Loaf
+## Data Menu
 
-Untuk menambah atau mengubah menu, edit daftar dummyMenu di Data.kt dan letakkan foto baru di res/drawable.
+Menu terdiri dari tiga kategori dan disimpan sebagai daftar statis di `Data.kt`.
 
-Keterbatasan
-Tidak memakai database, sehingga akun, keranjang, dan nama profil tidak tersimpan permanen.
-Proses pemesanan hanya simulasi dan tidak terhubung ke layanan pengiriman atau pembayaran.
+| Kategori | Jumlah | Contoh                           |
+|----------|--------|----------------------------------|
+| Coffee   | 8      | Espresso, Latte, Cappuccino      |
+| Drinks   | 5      | Matcha Green Tea, Taro Latte     |
+| Food     | 4      | Butter Croissant, Sourdough Loaf |
+
+Untuk menambah atau mengubah menu, edit daftar `dummyMenu` di `Data.kt` dan letakkan foto baru di `res/drawable`.
+
+## Keterbatasan
+
+- Tidak memakai database, sehingga akun, keranjang, dan nama profil tidak tersimpan permanen.
+- Proses pemesanan hanya simulasi dan tidak terhubung ke layanan pengiriman atau pembayaran.
