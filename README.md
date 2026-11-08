@@ -92,7 +92,9 @@ Untuk menambah atau mengubah menu, edit daftar `dummyMenu` di `Data.kt` dan leta
 
 
 ## Tampilan App
+
 -Splash
+
 <img width="1080" height="2275" alt="splash" src="https://github.com/user-attachments/assets/fd20baed-7305-4cfd-964f-872a9555c963" />
 
 
