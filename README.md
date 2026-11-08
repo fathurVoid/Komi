@@ -93,10 +93,35 @@ Untuk menambah atau mengubah menu, edit daftar `dummyMenu` di `Data.kt` dan leta
 
 ## Tampilan App
 
--Splash
+Splash
 
 <img width="1080" height="2275" alt="splash" src="https://github.com/user-attachments/assets/fd20baed-7305-4cfd-964f-872a9555c963" />
 
+Sign Up
 
+<img width="1080" height="2275" alt="sign up" src="https://github.com/user-attachments/assets/8ede065b-f4aa-47c1-bef3-6ab2e959c687" />
 
+Register
+
+<img width="1080" height="2275" alt="register" src="https://github.com/user-attachments/assets/5f718e51-ca25-4ac8-921f-941aaa9d91e2" />
+
+Login
+
+<img width="1080" height="2275" alt="login" src="https://github.com/user-attachments/assets/d76e759c-5ebf-422f-87c7-303990e00573" />
+
+Home
+
+<img width="1080" height="2275" alt="home" src="https://github.com/user-attachments/assets/c1743e18-aedb-4135-b670-d943a8ff5bd7" />
+
+Profile
+
+<img width="1080" height="2275" alt="profile" src="https://github.com/user-attachments/assets/af376015-5b57-41c0-b89f-7eaa6f5a0f21" />
+
+Order
+
+<img width="1080" height="2275" alt="order" src="https://github.com/user-attachments/assets/60ef97d8-6a35-4a24-8457-3dac3520abe7" />
+
+Confirm Order
+
+<img width="1080" height="2275" alt="confirm order" src="https://github.com/user-attachments/assets/2480cec7-aa60-44ae-ac8d-ba9c518e592c" />
 
